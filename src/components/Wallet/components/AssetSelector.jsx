@@ -22,7 +22,7 @@ export default function AssetSelector({ setAsset, style }) {
     ];
   }, [assets, nativeBalance, nativeToken]);
 
-  function handleChange(value) {
+  function handleChange(value = 0) {
     const token = fullBalance.find((token) => token.token_address === value);
     setAsset(token);
   }
@@ -67,7 +67,7 @@ export default function AssetSelector({ setAsset, style }) {
                   <p style={{ alignSelf: "right" }}>
                     (
                     {parseFloat(
-                      Moralis?.Units?.FromWei(item.balance, item.decimals),
+                      Moralis?.Units?.FromWei(item.balance ?? 0, item.decimals ?? 6),
                     )?.toFixed(6)}
                     )
                   </p>
