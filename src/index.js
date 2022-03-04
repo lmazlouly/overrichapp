@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { MoralisProvider } from "react-moralis";
@@ -34,9 +34,9 @@ const Application = () => {
 };
 
 ReactDOM.render(
-  <StrictMode>
+  // <StrictMode>
     <Application />,
-  </StrictMode>,
+  // </StrictMode>,
   document.getElementById("root"),
 );
 

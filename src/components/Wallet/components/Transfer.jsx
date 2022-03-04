@@ -136,8 +136,8 @@ function Transfer() {
           <Input
             size="large"
             prefix={<CreditCardOutlined />}
-            onChange={(e) => {
-              setAmount(`${e.target.value}`);
+            onChange={() => {
+              setAmount(`${0}`);
             }}
           />
         </div>
@@ -153,9 +153,9 @@ function Transfer() {
           loading={isPending}
           style={{ width: "100%", marginTop: "25px" }}
           onClick={() => transfer()}
-          disabled={!tx}
+          disabled={true}
         >
-          Transfer💸
+          Coming soon
         </Button>
       </div>
     </div>
